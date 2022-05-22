@@ -27,7 +27,7 @@
                 <?php endif; ?>
                 <div class="product_item_price">
                     <h3><?php the_field('price'); ?></h3>
-                    <button class="btn_cart_pr popmake-592"><?php the_field('button'); ?></button>
+                    <button class="btn_cart_pr popmake-154"><?php the_field('button'); ?></button>
                 </div>
             </div>
         </div>

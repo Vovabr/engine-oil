@@ -31,7 +31,7 @@
                 <h2><?php the_field('price'); ?></h2>
                 <p><?php the_field('product_availability'); ?></p>
             </div>
-            <button class="btn_cart popmake-592"><?php the_field('button'); ?></button>
+            <button class="btn_cart popmake-154"><?php the_field('button'); ?></button>
         </div>
 
         <?php endwhile; endif; ?>
