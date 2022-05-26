@@ -28,7 +28,8 @@ function eno_wp_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'eno_wp_enqueue_scripts');
 
 // удаляет H2 из шаблона пагинации
-function my_navigation_template() {
+function my_navigation_template() 
+{
 	return '
 	<nav class="navigation" role="navigation">
 		<div class="nav-links">%3$s</div>
@@ -38,10 +39,28 @@ function my_navigation_template() {
 add_filter('navigation_markup_template', 'my_navigation_template' );
 
 // в поиске ищет только по записям
-function my_exclude_posts_from_search( $query ){
+function my_exclude_posts_from_search( $query )
+{
     if( $query->is_main_query() && is_search() ){
          $query->set('post_type', 'post');
     }
 }
 add_action('pre_get_posts','my_exclude_posts_from_search');
 
+// добовляем колонку ID для записей и страниц в админку
+function true_id($args)
+{
+	$args['post_page_id'] = 'ID';
+	return $args;
+}
+function true_custom($column, $id)
+{
+	if($column === 'post_page_id'){
+		echo $id;
+	}
+}
+ 
+add_filter('manage_pages_columns', 'true_id', 5);
+add_action('manage_pages_custom_column', 'true_custom', 5, 2);
+add_filter('manage_posts_columns', 'true_id', 5);
+add_action('manage_posts_custom_column', 'true_custom', 5, 2);

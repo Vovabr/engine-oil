@@ -72,6 +72,11 @@ body {
 .search-submit {
     background-color: #c91922;
     color: #fff;
+    border: 0; 
+}
+
+.search-submit:hover {
+    background-color: #6e090f;
 }
 
 .header_bottom_phone {

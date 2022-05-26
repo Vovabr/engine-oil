@@ -3,17 +3,17 @@
 <section class="product">
     <div class="container">
     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <?php
-        $content = get_the_content();
-        $categoriesArr = get_the_category();
+        <?php
+            $content = get_the_content();
+            $categoriesArr = get_the_category();
 
-        $categories = [];
-        foreach($categoriesArr as $category) {
-            array_push($categories, '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>');
-        }
+            $categories = [];
+            foreach($categoriesArr as $category) {
+                array_push($categories, '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>');
+            }
 
-        $categories = implode(', ', $categories);
-    ?>    
+            $categories = implode(', ', $categories);
+        ?>    
         <div class="product_item">
             <?php if(has_post_thumbnail()): ?>
                 <?php the_post_thumbnail(); ?>
@@ -22,12 +22,13 @@
             <?php endif; ?>
             <div class="product_item_content">
                 <h2><?php the_title(); ?></h2>
+                <p>Артикул: <strong><?php the_ID(); ?></strong></p>
                 <?php if (!empty($content)): ?>
                 <?php echo $content; ?>
                 <?php endif; ?>
                 <div class="product_item_price">
                     <h3><?php the_field('price'); ?></h3>
-                    <button class="btn_cart_pr popmake-154"><?php the_field('button'); ?></button>
+                    <button class="btn_cart_pr popmake-291"><?php the_field('button'); ?></button>
                 </div>
             </div>
         </div>

@@ -22,6 +22,7 @@
                     <a href="<?php echo get_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/images/motor-oil.jpg" width="180" height="180" alt="oil"></a>
                 <?php endif; ?>
                 <div class="catalog_item_content_sp">
+                    <p>Артикул: <strong><?php the_ID(); ?></strong></p>
                     <?php if (!empty($content)): ?>
                     <?php echo $content; ?>
                     <?php endif; ?>
@@ -31,7 +32,7 @@
                 <h2><?php the_field('price'); ?></h2>
                 <p><?php the_field('product_availability'); ?></p>
             </div>
-            <button class="btn_cart popmake-154"><?php the_field('button'); ?></button>
+            <button class="btn_cart popmake-291"><?php the_field('button'); ?></button>
         </div>
 
         <?php endwhile; endif; ?>
