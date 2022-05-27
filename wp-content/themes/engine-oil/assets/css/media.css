@@ -1,3 +1,10 @@
+@media (max-width: 2561px) {
+
+    .order_form {
+        width: 100%;
+    }
+}
+
 @media (max-width: 1025px) {
 
     .header_top_item {
@@ -75,6 +82,10 @@
         margin-top: 64px;
     }
 
+    .product_item {
+        padding-top: 64px;
+    }
+
     .product_item img {
         height: 430px;
         width: 330px;
@@ -97,6 +108,7 @@
     .contacts_form .field {
         width: 60%;
     }
+
 }
 
 @media (max-width: 801px) {
@@ -193,10 +205,19 @@
         margin-left: 30px;
         margin-right: 30px;
     }
-    
+
 }
 
 @media (max-width: 769px) {
+
+    .header_bottom_item {
+        height: 64px;
+        padding: 0 50px;
+    }
+
+    .header_bottom_item .logo {
+        display: none;
+    }
 
     .promo_list {
         width: 60%;
@@ -210,17 +231,28 @@
         padding: 0 25px;
     }
 
-    .header_bottom_phone  {
-        font-size: 16px;
-    }
-
     .nav ul {
         padding: 5%;
     }
+    
+    .catalog,
+    .product,
+    .about,
+    .contacts {
+    padding: 25px 0;
+}
 
 
     .promo_list {
         width: 90%;
+    }
+
+    .catalog {
+        margin-top: 45px;
+    }
+
+    .catalog__list {
+        margin-top: 15px;
     }
 
     .catalog_item h3 {
@@ -242,7 +274,7 @@
     }
 
     .product_item_content h2 {
-        padding-bottom: 10px;
+        padding-bottom: 20px;
     }
 
     .contacts_form .field {
@@ -258,25 +290,31 @@
         font-weight:700;
         line-height:110px;
     }
+
+    .pum-container.popmake.theme-150.active.custom-position {
+        width: 90%;
+    }
     
 }
 
 @media (max-width: 376px) {
+
+    .header_bottom_item {
+        height: 44px;
+        padding: 0 20px;
+    }
+
+    .header_bottom_phone  {
+        font-size: 16px;
+    }
+
     .nav ul {
         top: 44px;
     }
 
     .search-field {
         width: 60%;
-        margin-left: 15px;
-    }
-
-    .header_bottom_item {
-        height: 44px;
-    }
-
-    .header_bottom_item .logo {
-        display: none;
+        margin-left: 30px;
     }
 
     .promo,
@@ -291,7 +329,7 @@
     }
 
     .catalog__list {
-        margin-top: 0;
+        margin-top: 10px;
     }
     
     .catalog_item_content {
@@ -306,6 +344,10 @@
 
     .catalog_item_price p {
         font-size: 14px;
+    }
+
+    .product_item {
+        padding-top: 40px;
     }
 
     .product_item_price h3 {
@@ -323,7 +365,7 @@
     }
 
     .product_item img {
-        height: 2600px;
+        height: 260px;
         width: 260px;
     }
 
@@ -334,6 +376,12 @@
 }
 
 @media (max-width: 321px) {
+
+    .search-field {
+        width: 60%;
+        margin-left: 30px;
+    }
+
     .header_bottom_phone  {
         font-size: 14px;
     }
@@ -378,5 +426,6 @@
     .pay-system-wrap {
         flex-wrap: wrap;
     }
+
 
 } 
